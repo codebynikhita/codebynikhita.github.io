@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme Toggle
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Load saved theme
     const savedTheme = localStorage.getItem('theme') || 'dark-mode';
     body.className = savedTheme;
 
@@ -16,11 +16,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Add scroll border to nav
+    // Copy Email to Clipboard
+    const copyEmailBtn = document.getElementById('copy-email-btn');
+    const emailText = document.getElementById('email-text');
+
+    if (copyEmailBtn && emailText) {
+        copyEmailBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(emailText.textContent.trim())
+                .then(() => {
+                    copyEmailBtn.classList.add('copied');
+                    setTimeout(() => {
+                        copyEmailBtn.classList.remove('copied');
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Failed to copy text: ', err);
+                });
+        });
+    }
+
+    // Scroll styling for navbar
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.1)';
+            navbar.style.boxShadow = 'var(--card-shadow)';
         } else {
             navbar.style.boxShadow = 'none';
         }

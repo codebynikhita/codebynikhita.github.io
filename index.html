@@ -10,6 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="dark-mode">
+    <!-- Ambient Background Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -20,6 +24,7 @@
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#certifications">Certifications</a>
+                <a href="#contact" class="nav-contact-link">Contact</a>
             </div>
             <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
                 <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="4.22" x2="19.78" y2="5.64"/></svg>
@@ -33,14 +38,23 @@
         <div class="hero-bg-grid"></div>
         <div class="container hero-container">
             <div class="hero-content">
-                <div class="hero-badge">Available for Werkstudent & Internships</div>
+                <div class="hero-badge-container">
+                    <span class="pulse-dot"></span>
+                    <span class="hero-badge">Available for Werkstudent & Internships</span>
+                </div>
                 <h1 class="hero-title">Hi, I'm <span class="gradient-text">Nikhita G. P.</span></h1>
                 <p class="hero-subtitle">Software Engineer & Data Analyst</p>
                 <p class="hero-desc">B.Tech Computer Science student at REVA University with practical SDE intern experience building scalable applications, AI models, and big data analytics pipelines.</p>
                 <div class="hero-ctas">
                     <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="https://github.com/codebynikhita" target="_blank" class="btn btn-secondary">GitHub</a>
-                    <a href="https://linkedin.com/in/nikhitagp" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                    <a href="https://github.com/codebynikhita" target="_blank" class="btn btn-secondary flex-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/nikhitagp" target="_blank" class="btn btn-secondary flex-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
                 </div>
             </div>
         </div>
@@ -49,20 +63,29 @@
     <!-- About Section -->
     <section id="about" class="section about-section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-header-block">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
             <div class="about-grid">
-                <div class="about-text-card">
+                <div class="about-text-card glass-panel">
                     <p>I am a final-year Computer Science and Engineering undergraduate who thrives at the intersection of robust backend development, machine learning, and data analytics.</p>
                     <p>My academic foundation combined with hands-on internship experience has taught me how to architect clean database schemas, implement structured API endpoints, and program distributed analysis models using enterprise technologies.</p>
                 </div>
-                <div class="about-stats-card">
-                    <div class="stat-item">
-                        <span class="stat-number">7.54</span>
-                        <span class="stat-label">B.Tech CGPA (≈ 2.21 Bavarian Scale)</span>
+                <div class="about-details-grid">
+                    <div class="detail-card glass-panel">
+                        <span class="detail-icon">🎓</span>
+                        <div class="detail-content">
+                            <h4>Education</h4>
+                            <p>B.Tech in Computer Science & Engineering<br><strong>REVA University</strong>, CGPA: 7.54</p>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Technical Certifications Completed</span>
+                    <div class="detail-card glass-panel">
+                        <span class="detail-icon">🏆</span>
+                        <div class="detail-content">
+                            <h4>Key Strengths</h4>
+                            <p>Machine Learning pipelines, normalized DB systems, distributed data computations.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,9 +95,13 @@
     <!-- Skills Section -->
     <section id="skills" class="section skills-section bg-alt">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <div class="section-header-block">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-underline"></div>
+            </div>
             <div class="skills-grid">
-                <div class="skills-card">
+                <div class="skills-card glass-panel glow-card">
+                    <div class="card-glow-layer"></div>
                     <h3>Programming</h3>
                     <div class="skills-list">
                         <span>Java</span>
@@ -87,7 +114,8 @@
                         <span>HTML5/CSS3</span>
                     </div>
                 </div>
-                <div class="skills-card">
+                <div class="skills-card glass-panel glow-card">
+                    <div class="card-glow-layer"></div>
                     <h3>Frameworks & Systems</h3>
                     <div class="skills-list">
                         <span>Flutter</span>
@@ -102,7 +130,8 @@
                         <span>Pandas/NumPy</span>
                     </div>
                 </div>
-                <div class="skills-card">
+                <div class="skills-card glass-panel glow-card">
+                    <div class="card-glow-layer"></div>
                     <h3>Enterprise & BI Tools</h3>
                     <div class="skills-list">
                         <span>SAP Business Technology Platform (BTP)</span>
@@ -121,14 +150,20 @@
     <!-- Experience Section -->
     <section id="experience" class="section experience-section">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
+            <div class="section-header-block">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="title-underline"></div>
+            </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">Feb 2025 – May 2025</div>
-                    <div class="timeline-content">
-                        <h3>Software Development Engineer (SDE) Intern</h3>
-                        <p class="timeline-company">KrewsUp Technologies Private Limited (Offline)</p>
+                    <div class="timeline-content glass-panel">
+                        <div class="exp-header">
+                            <h3>Software Development Engineer (SDE) Intern</h3>
+                            <span class="exp-badge">Offline</span>
+                        </div>
+                        <p class="timeline-company">KrewsUp Technologies Private Limited, India</p>
                         <ul>
                             <li>Programmed responsive mobile application interfaces using Flutter and Dart.</li>
                             <li>Designed and optimized scalable RESTful backend API routes using Node.js/Express.</li>
@@ -143,15 +178,19 @@
     <!-- Projects Section -->
     <section id="projects" class="section projects-section bg-alt">
         <div class="container">
-            <h2 class="section-title">Key Projects</h2>
+            <div class="section-header-block">
+                <h2 class="section-title">Key Projects</h2>
+                <div class="title-underline"></div>
+            </div>
             <div class="projects-grid">
                 <!-- SecureLock -->
-                <div class="project-card">
+                <div class="project-card glass-panel glow-card">
+                    <div class="card-glow-layer"></div>
                     <div class="project-header">
                         <span class="project-tag">Machine Learning</span>
                         <a href="https://github.com/codebynikhita/securelock" target="_blank" class="project-link">GitHub ↗</a>
                     </div>
-                    <h3>SecureLock: AI-powered Fake Detection</h3>
+                    <h3>SecureLock: AI Fake Detection</h3>
                     <p>Collaborative capstone project where I independently built the complete machine learning classification model using an ensemble pipeline of Random Forest, XGBoost, and k-NN. Achieved 94.2% accuracy in identifying clone accounts using a Flask backend.</p>
                     <div class="project-tech">
                         <span>Python</span>
@@ -163,12 +202,13 @@
                 </div>
 
                 <!-- WeatherData -->
-                <div class="project-card">
+                <div class="project-card glass-panel glow-card">
+                    <div class="card-glow-layer"></div>
                     <div class="project-header">
                         <span class="project-tag">Big Data</span>
                         <a href="https://github.com/codebynikhita/weather-data" target="_blank" class="project-link">GitHub ↗</a>
                     </div>
-                    <h3>WeatherData: Meteorological Big Data Analytics</h3>
+                    <h3>WeatherData: Big Data Pipelines</h3>
                     <p>Designed a distributed big data analytics pipeline using Apache Spark and Hadoop MapReduce to process, clean, and run queries on large-scale weather datasets, performing distributed exploratory analysis and data visualizations.</p>
                     <div class="project-tech">
                         <span>Apache Spark</span>
@@ -179,9 +219,10 @@
                 </div>
 
                 <!-- Payroll DBMS -->
-                <div class="project-card">
+                <div class="project-card glass-panel glow-card">
+                    <div class="card-glow-layer"></div>
                     <div class="project-header">
-                        <span class="project-tag">Web & Databases</span>
+                        <span class="project-tag">Databases</span>
                         <a href="https://github.com/codebynikhita/payroll-DBMS" target="_blank" class="project-link">GitHub ↗</a>
                     </div>
                     <h3>Advanced Payroll DBMS</h3>
@@ -195,12 +236,13 @@
                 </div>
 
                 <!-- TaskFlow -->
-                <div class="project-card">
+                <div class="project-card glass-panel glow-card">
+                    <div class="card-glow-layer"></div>
                     <div class="project-header">
                         <span class="project-tag">Full Stack</span>
                         <a href="https://github.com/codebynikhita/TaskFlow" target="_blank" class="project-link">GitHub ↗</a>
                     </div>
-                    <h3>TaskFlow: Project Management Portal</h3>
+                    <h3>TaskFlow: Management Portal</h3>
                     <p>Developed a MERN-stack collaborative project management platform featuring JWT secure user authentication, responsive Kanban dashboards, and background database export triggers to CSV/PDF formats.</p>
                     <div class="project-tech">
                         <span>MongoDB</span>
@@ -217,27 +259,70 @@
     <!-- Certifications Section -->
     <section id="certifications" class="section certifications-section">
         <div class="container">
-            <h2 class="section-title">Professional Certifications</h2>
+            <div class="section-header-block">
+                <h2 class="section-title">Professional Certifications</h2>
+                <div class="title-underline"></div>
+            </div>
             <div class="certs-grid">
-                <div class="cert-card">
+                <div class="cert-card glass-panel glow-card">
+                    <div class="card-glow-layer"></div>
                     <div class="cert-icon">📊</div>
-                    <h3>Qlik Sense Certified Architect & Analyst</h3>
-                    <p>Industry-standard certifications demonstrating proficiency in data model architecture, dashboard development, and advanced business analytics.</p>
+                    <h3>Qlik Sense Architect & Analyst</h3>
+                    <p>Industry certifications demonstrating proficiency in enterprise data model architecture, dashboard development, and advanced business analytics.</p>
                 </div>
-                <div class="cert-card">
+                <div class="cert-card glass-panel glow-card">
+                    <div class="card-glow-layer"></div>
                     <div class="cert-icon">☁️</div>
                     <h3>SAP Business Technology Platform</h3>
-                    <p>Completed official training tracks covering core BTP application deployment, cloud integrations, and business processes.</p>
+                    <p>Completed official training tracks covering BTP application deployment, cloud integrations, and cloud business processes.</p>
                 </div>
-                <div class="cert-card">
+                <div class="cert-card glass-panel glow-card">
+                    <div class="card-glow-layer"></div>
                     <div class="cert-icon">☕</div>
                     <h3>Wipro TalentNext Developer</h3>
                     <p>Certified Java Full Stack Developer with intensive training in enterprise software engineering principles.</p>
                 </div>
-                <div class="cert-card">
+                <div class="cert-card glass-panel glow-card">
+                    <div class="card-glow-layer"></div>
                     <div class="cert-icon">🤖</div>
                     <h3>IBM SkillsBuild AI & Data Science</h3>
                     <p>Credentials in Neural Networks, Generative AI, Big Data, Hadoop Foundations, and Cybersecurity basics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section bg-alt">
+        <div class="container">
+            <div class="section-header-block">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-card glass-panel">
+                <p class="contact-subtitle">I'm currently seeking student jobs (Werkstudent), SDE internships, and graduate research opportunities in Germany.</p>
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <div class="contact-value-row">
+                            <span id="email-text" class="contact-value">nikhitagp344@gmail.com</span>
+                            <button id="copy-email-btn" class="copy-btn" aria-label="Copy Email">
+                                <span class="copy-tooltip">Copied!</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone:</span>
+                        <span class="contact-value">+91 91138 79179</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Links:</span>
+                        <div class="contact-socials">
+                            <a href="https://github.com/codebynikhita" target="_blank">GitHub</a>
+                            <a href="https://linkedin.com/in/nikhitagp" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
