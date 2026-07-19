@@ -860,6 +860,43 @@ body.light-mode .moon-icon { display: block; }
     color: var(--accent);
 }
 
+/* ECTS Table Styling */
+.ects-table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.ects-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.ects-table th, .ects-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ects-table th {
+    background-color: rgba(21, 128, 61, 0.05);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.ects-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.ects-table tbody tr:hover {
+    background-color: rgba(21, 128, 61, 0.02);
+}
+
 /* Responsive Styles */
 @media (max-width: 900px) {
     .about-grid {
