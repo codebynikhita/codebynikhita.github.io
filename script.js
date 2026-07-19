@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
 
-    const savedTheme = localStorage.getItem('theme') || 'dark-mode';
+    // Default to light-mode (Cream & Green)
+    const savedTheme = localStorage.getItem('theme') || 'light-mode';
     body.className = savedTheme;
 
     themeToggleBtn.addEventListener('click', () => {
