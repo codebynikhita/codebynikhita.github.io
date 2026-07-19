@@ -200,6 +200,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Experience Card Modal (KrewsUp Certificate)
+    const expCard = document.querySelector('.timeline-content');
+    if (expCard) {
+        expCard.style.cursor = 'pointer';
+        expCard.addEventListener('click', () => {
+            console.log("Experience card click detected, loading KrewsUp certificate.");
+            const certUrl = "certificates/KrewsUp_Internship_Certificate.pdf";
+            const title = "KrewsUp SDE Internship Certificate";
+            const html = `
+                <h3 class="modal-title" style="margin-bottom:16px;">${title}</h3>
+                <div class="iframe-container">
+                    <iframe src="${certUrl}" width="100%" height="500px" style="border:none; border-radius:8px;"></iframe>
+                </div>
+                <div class="modal-actions" style="margin-top:16px;">
+                    <a href="${certUrl}" target="_blank" class="btn btn-primary">Open PDF in New Tab</a>
+                </div>
+            `;
+            openModal(html);
+        });
+    }
+
     // Scroll styling for navbar
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
