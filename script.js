@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', (e) => {
             if (e.target.tagName === 'A') return; // let GitHub links work directly
             const linkHref = card.querySelector('.project-link').getAttribute('href');
-            const projKey = linkHref.split('/').pop().toLowerCase();
+            const projKey = linkHref.split('/').pop().toLowerCase().replace(/-/g, '');
             const data = projectData[projKey];
             if (data) {
                 const techBadges = data.tech.map(t => `<span>${t}</span>`).join('');
