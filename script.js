@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalClose = modal.querySelector('.modal-close');
 
     function openModal(contentHTML) {
+        console.log("openModal executing, adding active class to modal.");
         modalContent.innerHTML = contentHTML;
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -145,10 +146,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.project-card').forEach(card => {
         card.style.cursor = 'pointer';
         card.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A') return; // let GitHub links work directly
+            console.log("Project card click detected, target:", e.target);
+            if (e.target.tagName === 'A') {
+                console.log("Target is link anchor, allowing default navigation.");
+                return;
+            }
             const linkHref = card.querySelector('.project-link').getAttribute('href');
             const projKey = linkHref.split('/').pop().toLowerCase().replace(/-/g, '');
             const data = projectData[projKey];
+            console.log("Project key resolved:", projKey, "Data found:", !!data);
             if (data) {
                 const techBadges = data.tech.map(t => `<span>${t}</span>`).join('');
                 const html = `
@@ -175,7 +181,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const keys = ['qlik', 'sap', 'wipro', 'ibm'];
         const key = keys[index];
         card.addEventListener('click', () => {
+            console.log("Cert card click detected, key:", key);
             const certUrl = certFiles[key];
+            console.log("Cert URL resolved:", certUrl);
             if (certUrl) {
                 const title = card.querySelector('h3').textContent;
                 const html = `
