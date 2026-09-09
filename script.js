@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tag: "Machine Learning & Capstone Project",
             tech: ["Python", "scikit-learn", "XGBoost", "Random Forest", "Flask", "REST APIs"],
             desc: `
-                <p>SecureLock is an ML-based detection system developed for identifying synthetic media and clone profiles across online platforms.</p>
+                <p>Final-year capstone project where I built the complete machine learning classification model, from data pipeline through deployment.</p>
                 <h4>Key Contributions & Engineering Results:</h4>
                 <ul>
                     <li>Engineered classification pipelines using an ensemble of Random Forest and XGBoost with automated feature preprocessing.</li>
