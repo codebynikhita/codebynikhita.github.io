@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li>Achieved approximately 28% lower memory overhead and 40% fewer cache misses through memory-layout optimizations.</li>
                 </ul>
                 <div class="modal-actions">
-                    <a href="https://github.com/codebynikhita" target="_blank" class="btn btn-primary">View Code on GitHub</a>
+                    <a href="https://github.com/codebynikhita/Dense-tree" target="_blank" class="btn btn-primary">View Code on GitHub</a>
                 </div>
             `
         },
